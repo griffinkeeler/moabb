@@ -391,6 +391,16 @@ class BaseDataset(metaclass=MetaclassDataset):
         self.doi = doi
         self.unit_factor = unit_factor
 
+    def print_data(self):
+        print("Subject list:", self.subject_list)
+        print("# of Sessions:", self.n_sessions)
+        print("Event ID:", self.event_id)
+        print("Code:", self.code)
+        print("Interval:", self.interval)
+        print("Paradigm:", self.paradigm)
+        print("DOI:", self.doi)
+        print("Unit Factor:", self.unit_factor)
+
     def _create_process_pipeline(self):
         return Pipeline(
             [
